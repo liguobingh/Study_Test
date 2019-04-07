@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/standard_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="standard dialog" />
+
+    <Button
+        android:id="@+id/setView_static"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="setView static" />
+
+    <Button
+        android:id="@+id/setView_dynamic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="setView dynamic" />
+
+</LinearLayout>

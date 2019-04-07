@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="#ffffff">
+    <!--background属性设置的内容是什么-->
+
+    <RelativeLayout
+        android:id="@+id/push_notification1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+        <!--layout_marginTop属性设置内容是什么-->
+
+        <ImageView
+            android:id="@+id/notification_large_icon1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="fitXY" />
+        <!--该控件的父布局只剩下44dp，此时的处理机制是什么-->
+        <!--scaleType属性设置内容是什么-->
+
+        <TextView
+            android:id="@+id/notification_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/notification_large_icon1"
+            android:maxLines="1"
+            android:text="@string/upush_notification_title"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+        <!--layout_toRightOf属性设置的内容是什么-->
+        <!--maxLines属性设置的内容是什么-->
+        <!--怎么取textColor、textSize属性设置值。还有这些值的单位怎么区分-->
+
+        <TextView
+            android:id="@+id/notification_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notification_title"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/notification_large_icon1"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="false"
+            android:singleLine="true"
+            android:text="@string/upush_notification_message"
+            android:textColor="#000000" />
+        <!--layout_below、ellipsize、fadingEdge、focusable、focusableInTouchMode、marqueeRepeatLimit、scrollHorizontally属性设置的内容是什么-->
+        <!--还有这里没有设置字体大小，默认字体大小是多少？在哪里查看？-->
+
+        <requestFocus />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/push_notification2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/notification_large_icon2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

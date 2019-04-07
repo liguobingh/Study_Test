@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">DialogTest</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="dialog_title">退出</string>
+    <string name="dialog_message">你确定要离开吗？</string>
+    <string name="certain">确定</string>
+    <string name="certain_click">ok click</string>
+    <string name="cancel">取消</string>
+    <string name="cancel_click">cancel click</string>
+    <string name="center">中间</string>
+    <string name="center_click">center click</string>
+
+</resources>
