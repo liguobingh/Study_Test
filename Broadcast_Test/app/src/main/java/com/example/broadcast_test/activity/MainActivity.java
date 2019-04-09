@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.broadcast_test.BootCompleteReceiver;
 import com.example.broadcast_test.R;
+import com.example.broadcast_test.config.BroadcastAction;
 import com.example.broadcast_test.util.NetworkUtil;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         // 两种初始化方式都可以，但是注释掉的这种存在 API级别 问题
 //        intentFilter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         intentFilter = new IntentFilter();
-        intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
+        intentFilter.addAction(BroadcastAction.CONNECTIVITY_CHANGE);
         networkChangeReceiver = new NetworkChangeReceiver();
         registerReceiver(networkChangeReceiver, intentFilter);
 
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         localBroadcastManager = LocalBroadcastManager.getInstance(this);// 获取 LocalBroadcastManager类 的实例
         localIntentFilter = new IntentFilter();
-        localIntentFilter.addAction("com.example.broadcasttest.LOCAL_BROADCAST");
+        localIntentFilter.addAction(BroadcastAction.LOCAL_BROADCAST);
         localReceiver = new LocalReceiver();
         localBroadcastManager.registerReceiver(localReceiver, localIntentFilter);// 注册本地广播接收器
     }
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                  * 发送自定义广播（标准广播）
                  */
 //                // 构建一个Intent对象，把要发送的广播值传入（还可以在Intent中携带一些数据传递给广播接收器）
-//                Intent intent = new Intent("com.example.broadcasttest.MY_BROADCAST");
+//                Intent intent = new Intent(BroadcastAction.MY_BROADCAST);
 //                // 调用Context类的 sendBroadcast(Intent intent) 方法将广播发送出去
 //                sendBroadcast(intent);
 //            }
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 /**
                  * 发送自定义广播（有序广播）
                  */
-//                Intent intent = new Intent("com.example.broadcasttest.MY_BROADCAST");
+//                Intent intent = new Intent(BroadcastAction.MY_BROADCAST);
 //                sendOrderedBroadcast(intent, null);
 //            }
 
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 /**
                  * 发送自定义广播（本地广播）
                  */
-                Intent intent = new Intent("com.example.broadcasttest.LOCAL_BROADCAST");
+                Intent intent = new Intent(BroadcastAction.LOCAL_BROADCAST);
                 localBroadcastManager.sendBroadcast(intent);// 发送本地广播
             }
         });
