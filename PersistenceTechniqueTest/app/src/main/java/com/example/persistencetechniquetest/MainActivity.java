@@ -47,19 +47,22 @@ public class MainActivity extends AppCompatActivity {
         try {
             fileInputStream = openFileInput("data");
             reader = new BufferedReader(new InputStreamReader(fileInputStream));
-            Strinmg
-        } catch () {
-
+            String line = "";
+            while ((line = reader.readLine()) != null) {
+                content.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         } finally {
-            if () {
+            if (reader != null) {
                 try {
-
-                } catch () {
-
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }
         }
-        return
+        return content.toString();
     }
 
     public void save(String inputText) {
