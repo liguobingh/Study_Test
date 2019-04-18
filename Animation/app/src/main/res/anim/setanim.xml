@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="6000"
+    android:fillAfter="true">
+    <!--注意：在set标签中设置如下属性是无效的，必须对每个动画单独设置才有作用。-->
+    <!--研究一下为什么！！！-->
+    <!--android:repeatMode="restart"-->
+    <!--android:repeatCount="3"-->
+
+    <alpha
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0" />
+
+    <scale
+        android:fromXScale="0.0"
+        android:fromYScale="0.0"
+        android:toXScale="1.4"
+        android:toYScale="1.4"
+        android:pivotX="50%"
+        android:pivotY="50%"/>
+
+    <rotate
+        android:fromDegrees="0"
+        android:toDegrees="720"
+        android:pivotX="50%"
+        android:pivotY="50%"/>
+</set>

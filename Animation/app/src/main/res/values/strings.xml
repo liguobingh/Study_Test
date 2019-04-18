@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Animation</string>
+
+    <string name="motto2">人生最纠结的事情不是你甘于平淡，而是你明明不希望平凡，却不知道未来应该怎么办。</string>
+    <string name="theme">主题：视图动画（View Animation）</string>
+    <string name="scale_anim">第1部分：scale_anim</string>
+    <string name="Animation_attr">第2部分：Animation类继承属性</string>
+    <string name="alpha_anim">第3部分：alpha_anim</string>
+    <string name="rotate_anim">第4部分：rotate_anim</string>
+    <string name="translate_anim">第5部分：translate_anim</string>
+    <string name="set_anim">第6部分：set_anim</string>
+
+    <string name="content_text">Hello World!</string>
+
+    <string name="next">进入主题</string>
+    <string name="start">开始动画（scale_anim1）</string>
+    <string name="next1">下一部分（scale_anim2）</string>
+    <string name="start1">开始动画（scale_anim2）</string>
+    <string name="next2">下一部分（Animation类继承属性）</string>
+    <string name="start2">开始动画（Animation类继承属性）</string>
+    <string name="next3">下一部分（alpha_anim1）</string>
+    <string name="start3">开始动画（alpha_anim1）</string>
+    <string name="next4">下一部分（rotate_anim1）</string>
+    <string name="start4">开始动画（rotate_anim1）</string>
+    <string name="next5">下一部分（translate_anim1）</string>
+    <string name="start5">开始动画（translate_anim1）</string>
+    <string name="next6">下一部分（translate_anim1）</string>
+</resources>
