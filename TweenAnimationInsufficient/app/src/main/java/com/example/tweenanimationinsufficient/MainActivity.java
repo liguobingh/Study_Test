@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
     public void startAnimation() {
         final ValueAnimator animator = ValueAnimator.ofInt(0, 400);
         animator.setDuration(4000);
-        animator.start();
 
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
