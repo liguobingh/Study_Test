@@ -1,6 +1,7 @@
 package com.example.object;
 
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ObjectAnimator animator = ObjectAnimator.ofFloat(tv, "scaleY" , 0, 3, 1);
                 animator.setDuration(6000);
+                animator.setRepeatMode(ValueAnimator.RESTART);
+                animator.setRepeatCount(ValueAnimator.INFINITE);
                 animator.start();
             }
         });
