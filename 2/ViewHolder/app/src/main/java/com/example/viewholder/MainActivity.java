@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         init();
-        initLietener();
+        initListener();
     }
 
     public void init() {
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 //        animator.start();
     }
 
-    public void initLietener() {
+    public void initListener() {
         scale_anim_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
