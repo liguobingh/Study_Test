@@ -1,0 +1,15 @@
+配置身份
+$ git config --global user.name "liguobin"
+$ git config --global user.email "2437053693@qq.com"
+
+创建代码仓库
+$ cd C://
+$ cd Users
+$ cd liguobin
+$ cd AndroidStudioProjects
+$ cd NewXmPluginSDK-master
+$ git init
+$ ls -al
+
+
+
